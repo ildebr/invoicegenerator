@@ -18,6 +18,12 @@ py main.py
 
 Which will open the tkinter application.
 
+![tkinter app](https://github.com/ildebr/invoicegenerator/blob/master/usagephotos/Screenshot%202023-11-07%20041013.png)
+
+Once you have added all of your invoice information and charges you can press the generate invoice button, which will generate a file such as
+
+![pdf](https://github.com/ildebr/invoicegenerator/blob/master/usagephotos/Screenshot%202023-11-07%20041053.png)
+
 
 ## Stand-alone application
 
