@@ -1,0 +1,8 @@
+/dist
+/venv
+/build
+/__pycache__
+
+main.spec
+*.pdf
+table_function.py
