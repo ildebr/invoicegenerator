@@ -4,6 +4,7 @@ import datetime
 from second import create_pdf_file
 
 
+
 def clear_item():
     qty_spinbox.delete(0, tkinter.END)
     qty_spinbox.insert(0, '1')
