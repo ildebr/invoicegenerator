@@ -1,5 +1,6 @@
 import tkinter
-from tkinter import ttk, StringVar
+from tkinter import ttk, StringVar, filedialog
+
 import datetime
 from second import create_pdf_file
 
@@ -40,11 +41,15 @@ def add_item():
     clear_item()
 
 def generate_invoice():
-    name = first_name_entry.get()+last_name_entry.get()
+
+    #Get the file path where the file is going to be saved
+    filepath = filedialog.asksaveasfilename(defaultextension=".pdf", filetypes=[("PDF Document", ".pdf")])
+
+    #name = first_name_entry.get()+last_name_entry.get()
 
     subtotal = sum(item[3] for item in invoice_list)
 
-    doc_name = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S") +'.pdf'
+    #doc_name = datetime.datetime.now().strftime("%Y-%m-%d-%H%M%S") +'.pdf'
 
     date_now =datetime.datetime.now().strftime("%Y-%m-%d")
 
@@ -52,7 +57,7 @@ def generate_invoice():
     list.append(["Description", "Quantity", "Price", "Total"])
     list.extend(invoice_list)
 
-    create_pdf_file(first_name_entry.get(), last_name_entry.get(),email_entry.get(),ninvoice_entry.get(),date_now, subtotal, list)
+    create_pdf_file(first_name_entry.get(), last_name_entry.get(),email_entry.get(),ninvoice_entry.get(),date_now, subtotal, list, filepath)
 
 
 window = tkinter.Tk()

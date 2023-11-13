@@ -5,7 +5,7 @@ from create_table_fpdf2 import PDF
 
 
 
-def create_pdf_file(name, last_name,email, ninvoice,date,subtotal,invoice_list, title=None):
+def create_pdf_file(name, last_name,email, ninvoice,date,subtotal,invoice_list, path, title=None):
     print(date)
 
     pdf = PDF('P','mm', 'Letter', 'A3')
@@ -88,4 +88,4 @@ def create_pdf_file(name, last_name,email, ninvoice,date,subtotal,invoice_list, 
     pdf.cell(40,8,'Total', align='L', border=1)
     pdf.cell(30,8,f'${subtotal}', align='L', border=1)
 
-    pdf.output('pdf2.pdf')
+    pdf.output(path)
